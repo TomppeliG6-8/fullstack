@@ -8,7 +8,7 @@ sequenceDiagram
     server-->>browser: 302 URL_redirect https://studies.cs.helsinki.fi/exampleapp/new_note
     deactivate server
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    browser->>server: HTTP_GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
     server-->>browser: the css file
     deactivate server
