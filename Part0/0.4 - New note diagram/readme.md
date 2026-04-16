@@ -9,7 +9,7 @@ sequenceDiagram
     deactivate server
 
     browser->>server: HTTP_GET https://studies.cs.helsinki.fi/exampleapp/notes
-    Note right of browser: The browser reloads the Notes page
+    Note right of browser: The browser reloads the Notes page which causes three more HTTP requests
     activate server
     server-->>browser: the css file
     deactivate server
