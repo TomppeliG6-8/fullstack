@@ -3,21 +3,21 @@ sequenceDiagram
     participant browser
     participant server
 
-    browser->>server: HTTP_POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    browser->>server: HTTP_POST - https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    server-->>browser: 302 URL_redirect https://studies.cs.helsinki.fi/exampleapp/new_note
+    server-->>browser: 302 URL_redirect - https://studies.cs.helsinki.fi/exampleapp/new_note
     deactivate server
 
-    browser->>server: HTTP_GET https://studies.cs.helsinki.fi/exampleapp/notes
+    browser->>server: HTTP_GET - https://studies.cs.helsinki.fi/exampleapp/notes
     Note right of browser: The browser reloads the Notes page which causes three more HTTP requests
-    browser->>server: HTTP_GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    browser->>server: HTTP_GET - https://studies.cs.helsinki.fi/exampleapp/main.css
     activate server
-    server-->>browser: the css file
+    server-->>browser: 200 OK - the css file
     deactivate server
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    browser->>server: HTTP_GET - https://studies.cs.helsinki.fi/exampleapp/main.js
     activate server
-    server-->>browser: the JavaScript file
+    server-->>browser: 200 OK - the JavaScript file
     deactivate server
 
     Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
