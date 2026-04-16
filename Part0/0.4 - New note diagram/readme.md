@@ -1,7 +1,8 @@
 ```mermaid
 graph TD;
-    HTTP_POST-->https://studies.cs.helsinki.fi/exampleapp/new_note;
-    B-->D;
+    Browser_HTTP_POST-->https://studies.cs.helsinki.fi/exampleapp/new_note;
+    https://studies.cs.helsinki.fi/exampleapp/new_note-->D; url dd
     C-->D;
     test-->klfsdahfkjasd;
 ```
+HTTP status code 302. This is a URL redirect
