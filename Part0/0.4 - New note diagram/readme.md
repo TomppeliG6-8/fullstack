@@ -5,7 +5,7 @@ sequenceDiagram
 
     browser->>server: HTTP_POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    server-->>browser: HTML document
+    server-->>browser: 302 URL_redirect https://studies.cs.helsinki.fi/exampleapp/new_note
     deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
