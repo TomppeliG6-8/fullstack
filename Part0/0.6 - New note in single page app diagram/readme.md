@@ -21,8 +21,8 @@ sequenceDiagram
     Note right of browser: The browser starts executing the JavaScript code
     
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
-    Note right of browser: Javascript fetches JSON from the server - xhttp.open("GET", "/exampleapp/data.json")
     activate server
+    Note right of browser: Javascript fetches JSON from the server - xhttp.open("GET", "/exampleapp/data.json")
     server-->>browser: 200 OK - data.json
     deactivate server
 
