@@ -31,6 +31,6 @@ sequenceDiagram
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/new_note_spa
     activate server
     server-->>browser: 201 CREATED
-    Note right of the browser: Server does not ask for REDIRECT, the browser stays on the same page, and there is no further HTTP requests
+    Note right of browser: Server does not ask for REDIRECT, the browser stays on the same page, and there is no further HTTP requests
     deactivate server
 ```
